@@ -1,9 +1,11 @@
 pub struct Solution;
 impl Solution {
     /// Solution to [leetcode 1829](https://leetcode.com/problems/maximum-xor-for-each-query/description/?envType=daily-question&envId=2024-11-08).
-    /// You are given a sorted array nums of n non-negative integers and an integer maximumBit. You want to perform the following query n times:
-    ///
-    ///     Find a non-negative integer k < 2maximumBit such that nums[0] XOR nums[1] XOR ... XOR nums[nums.length-1] XOR k is maximized. k is the answer to the ith query.
+    /// You are given a sorted array nums of n non-negative integers and an integer maximumBit.
+    /// 
+    /// You want to perform the following query n times:
+    ///     Find a non-negative integer k < 2maximumBit such that nums[0] XOR nums[1] XOR ... 
+    ///         XOR nums[nums.length-1] XOR k is maximized. k is the answer to the ith query.
     ///     Remove the last element from the current array nums.
     ///
     /// Return an array answer, where answer[i] is the answer to the ith query.
@@ -35,8 +37,10 @@ impl Solution {
     ///
     /// # Solution learnings
     ///
-    /// Bitwise xor operations are communicative and their own opposite. Meaning if you calculate the xor of an array and remove an element, calculating the xor of that element and your previous sum will be the same as calculating the entire sum again.
-    /// This means we can get the sum once then maintain it.
+    /// Bitwise xor operations are communicative and their own opposite. Meaning if you calculate the
+    /// xor of an array and remove an element, calculating the xor of that element and your previous 
+    /// sum will be the same as calculating the entire sum again. This means we can get the sum once
+    /// then maintain it.
     ///
     /// I think there might be a way to solve this problem backwards and get the right result, but I
     /// kept getting the wrong one when I tried it.
