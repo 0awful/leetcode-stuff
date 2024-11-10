@@ -29,12 +29,13 @@ impl Solution {
     /// ```
     ///
     /// # Constraints
+    /// ```md
     ///     nums.length == n
     ///     1 <= n <= 105
     ///     1 <= maximumBit <= 20
     ///     0 <= nums[i] < 2maximumBit
     ///     nums is sorted in ascending order.
-    ///
+    /// ```
     /// # Solution learnings
     ///
     /// Bitwise xor operations are communicative and their own opposite. Meaning if you calculate the
